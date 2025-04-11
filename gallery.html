@@ -4,13 +4,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> Contact | Caste Rush </title>
+    <title> Gallery | Caste Rush </title>
     <!-- favicons Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
     <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Eston HTML 5 Template " />
+    <meta name="description" content="Caste Rush HTML 5 Template " />
+    <!-- Lightbox CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -102,7 +105,7 @@
 
 
     <div class="page-wrapper">
-         <header class="main-header">
+        <header class="main-header">
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
                     <div class="main-menu__wrapper-inner">
@@ -152,9 +155,11 @@
             </nav>
         </header>
 
-        <div class="stricky-header stricked-menu main-menu main-menu-three">
-            <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
-        </div><!-- /.stricky-header -->
+        <div class="stricky-header stricked-menu main-menu">
+            <div class="sticky-header__content"></div>
+            <!-- /.sticky-header__content -->
+        </div>
+        <!-- /.stricky-header -->
 
         <!--Page Header Start-->
         <section class="page-header">
@@ -162,13 +167,13 @@
             </div>
             <div class="container">
                 <div class="page-header__inner">
-                    <p>Caste Rush Contact</p>
-                    <h2>Get In Touch</h2>
+                    <p>Caste Rush Gallery</p>
+                    <h2>Gallery</h2>
                     <div class="thm-breadcrumb__inner">
                         <ul class="thm-breadcrumb list-unstyled">
                             <li><a href="index.html">Home</a></li>
                             <li><span>/</span></li>
-                            <li>Contact</li>
+                            <li>Gallery</li>
                         </ul>
                     </div>
                 </div>
@@ -176,80 +181,70 @@
         </section>
         <!--Page Header End-->
 
-        
-
-        <!--Contact One Start -->
-        <section class="contact-one">
-            <div class="contact-one__bg"></div>
+        <!--Brand One Start-->
+        <section class="brand-one py-5">
             <div class="container">
-                <div class="row">
-                    <div class="col-xl-3"></div>
-                    <div class="col-xl-6">
-                        <div class="contact-one__left">
-                            <div class="section-title text-left">
-                                <p class="section-title__tagline">Get In Touch</p>
-                                <div class="section-title__title-box">
-                                    <h2 class="section-title__title">Let’s talk with us</h2>
-                                    <p>Have project</p>
+                <!-- <div class="news-one__top mb-4">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="news-one__left">
+                                <div class="section-title text-left">
+                                    <p class="section-title__tagline">Company Insights</p>
+                                    <div class="section-title__title-box">
+                                        <h2 class="section-title__title">Gallery</h2>
+                                        <p>Screen Grabs</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="contact-one__form-box">
-                                <form action="assets/inc/sendemail.php" class="contact-one__form contact-form-validated"
-                                    novalidate="novalidate">
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="contact-one__input-box">
-                                                <div class="contact-one__icon">
-                                                    <span class="icon-user"></span>
-                                                </div>
-                                                <input type="text" placeholder="Full name" name="name">
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="contact-one__input-box">
-                                                <div class="contact-one__icon">
-                                                    <span class="icon-open-mail"></span>
-                                                </div>
-                                                <input type="email" placeholder="Email address" name="email">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-xl-12">
-                                            <div class="contact-one__input-box text-message-box">
-                                                <div class="contact-one__icon contact-one__icon-2">
-                                                    <span class="icon-pen"></span>
-                                                </div>
-                                                <textarea name="message" placeholder="Message"></textarea>
-                                            </div>
-                                            <div class="contact-one__btn-box">
-                                                <button type="submit" class="thm-btn contact-one__btn"><span
-                                                        class="fas fa-long-arrow-alt-right"></span> Submit</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </form>
-                                <div class="result"></div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-center justify-content-md-end mt-3 mt-md-0">
+                            <div class="news-one__btn-box">
+                                <a href="blog.html" class="news-one__btn thm-btn">
+                                    <span class="fas fa-long-arrow-alt-right"></span> View Gallery
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
-                        <!-- <div class="contact-one__right">
-                            <div class="contact-one__logo">
-                                <a href="#">Eston.</a>
-                            </div>
-                            <div class="contact-one__google-map">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
-                                    class="google-map__one" allowfullscreen></iframe>
-
-                            </div>
-                        </div> -->
+                </div> -->
+                <div class="brand-one__inner">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/image-01.png" data-lightbox="gallery">
+                                <img src="assets/images/gallery/image-01.png" alt="Gallery Image 1" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/image-02.jpg" data-lightbox="gallery">
+                                <img src="assets/images/gallery/image-02.jpg" alt="Gallery Image 2" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/image-03.jpg" data-lightbox="gallery">
+                                <img src="assets/images/gallery/image-03.jpg" alt="Gallery Image 3" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/image-04.jpg" data-lightbox="gallery">
+                                <img src="assets/images/gallery/image-04.jpg" alt="Gallery Image 4" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/image-05.jpg" data-lightbox="gallery">
+                                <img src="assets/images/gallery/image-05.jpg" alt="Gallery Image 5" class="img-fluid rounded">
+                            </a>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="assets/images/gallery/image-06.jpg" data-lightbox="gallery">
+                                <img src="assets/images/gallery/image-06.jpg" alt="Gallery Image 6" class="img-fluid rounded">
+                            </a>
+                        </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
-        <!--Contact One End -->
+        
+        <!--Brand One End-->
 
         <!--Site Footer Start-->
         <footer class="site-footer">
@@ -379,16 +374,7 @@
             <div class="mobile-nav__container"></div>
             <!-- /.mobile-nav__container -->
 
-            <ul class="mobile-nav__contact list-unstyled">
-                <!-- <li>
-                    <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@eston.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
-                </li> -->
-            </ul><!-- /.mobile-nav__contact -->
+           <!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
                     <a href="#" class="fab fa-twitter"></a>
@@ -450,10 +436,11 @@
     <script src="assets/vendors/hover-animated/tweenMax.min.js"></script>
 
 
-
-
     <!-- template js -->
     <script src="assets/js/eston.js"></script>
+    <!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
 </body>
 
 </html>
