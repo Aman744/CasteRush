@@ -3690,12 +3690,15 @@ ul {
 }
 .owl-carousel .owl-item img {
   display: block;
-  width: 25%;
+  width: 50% !important;
 }
 .slider-logo{
   justify-content: center;
   align-items: center;
   display: flex;
+}
+.slider-logo #slider-logo-img { 
+  width: 25% !important;
 }
 .brand-one__list--two {
   border-bottom: 0;
