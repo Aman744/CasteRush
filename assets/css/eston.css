@@ -1863,8 +1863,9 @@ ul {
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
+  margin-bottom: 50px;
   color: var(--eston-white);
-  font-family: var(--eston-font-two);
+  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
   opacity: 0;
   visibility: hidden;
@@ -1886,7 +1887,7 @@ ul {
   line-height: 80px;
   letter-spacing: -0.02em;
   margin-top: 17px;
-  margin-bottom: 60px;
+  margin-bottom: 17px;
   opacity: 0;
   visibility: hidden;
   -webkit-transform: translateY(-120px);
