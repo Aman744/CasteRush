@@ -40,6 +40,16 @@
   --bs-gutter-y: 30px;
 }
 
+video {
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
 body {
   font-family: var(--eston-font);
   font-size: 16px;
@@ -628,10 +638,10 @@ ul {
 # Navigations One
 --------------------------------------------------------------*/
 .main-header {
-  background: transparent;
+  background: #222222;
   position: absolute;
   left: 0px;
-  top: 15px;
+  top: 0px;
   right: 0;
   width: 100%;
   transition: all 500ms ease;
@@ -1717,7 +1727,7 @@ ul {
 --------------------------------------------------------------*/
 .main-slider {
   position: relative;
-  background: #000000;
+  background: #00000000;
   z-index: 10;
 }
 
