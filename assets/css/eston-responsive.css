@@ -768,6 +768,14 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
+    
+    .main-slider {
+        margin-top: 95px;
+    }
+    .slider-play {
+    bottom: 0px;
+    }
+    
     .section-title__tagline {
         margin-left: -12px;
     }
@@ -788,7 +796,7 @@
     }
 
     .about-one {
-        padding: 120px 0 120px;
+        padding: 50px 0 120px;
     }
 
     .about-one__shape-2 {

@@ -653,6 +653,44 @@ ul {
   display: block;
   z-index: 1;
 }
+.slider-play {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  width: 70px;
+  height: 70px;
+  background-color: red;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+
+}
+.slider-play a {
+  color: white;
+}
+/* .play-button {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  color: white;
+  font-size: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
 
 .main-menu__wrapper {
   position: relative;
@@ -1228,6 +1266,7 @@ ul {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .mobile-nav__top .main-menu__login a {
@@ -2995,7 +3034,7 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  text-align: right;
+  text-align: left;
   color: #FFB8C0;
 }
 
@@ -3014,7 +3053,7 @@ ul {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  text-align: right;
+  text-align: left;
   color: #FFB8C0;
 }
 
@@ -3046,6 +3085,11 @@ ul {
 /*--------------------------------------------------------------
 # Team One
 --------------------------------------------------------------*/
+.crew{
+  display: inline-flex;
+  justify-content: center;
+}
+
 .team-one {
   position: relative;
   display: block;
@@ -7224,7 +7268,7 @@ ul {
 .team-three__single {
   position: relative;
   display: block;
-  margin-bottom: 195px;
+  margin-bottom: 90px;
 }
 
 .team-three__single-2 {
