@@ -1075,15 +1075,15 @@
 
   // window scroll event
   $(window).on("scroll", function () {
-    if ($(".stricked-menu").length) {
-      var headerScrollPos = 130;
-      var stricky = $(".stricked-menu");
-      if ($(window).scrollTop() > headerScrollPos) {
-        stricky.addClass("stricky-fixed");
-      } else if ($(this).scrollTop() <= headerScrollPos) {
-        stricky.removeClass("stricky-fixed");
-      }
-    }
+    // if ($(".stricked-menu").length) {
+    //   var headerScrollPos = 130;
+    //   var stricky = $(".stricked-menu");
+    //   if ($(window).scrollTop() > headerScrollPos) {
+    //     stricky.addClass("stricky-fixed");
+    //   } else if ($(this).scrollTop() <= headerScrollPos) {
+    //     stricky.removeClass("stricky-fixed");
+    //   }
+    // }
     if ($(".scroll-to-top").length) {
       var strickyScrollPos = 100;
       if ($(window).scrollTop() > strickyScrollPos) {

@@ -775,6 +775,12 @@
     .slider-play {
     bottom: 0px;
     }
+    .slider-play {
+       bottom: 20px;
+       width: 30px;
+       height: 30px;
+       font-size: 10px;
+    }
     
     .section-title__tagline {
         margin-left: -12px;
@@ -796,7 +802,7 @@
     }
 
     .about-one {
-        padding: 50px 0 120px;
+        padding: 10px 0 25px;
     }
 
     .about-one__shape-2 {
