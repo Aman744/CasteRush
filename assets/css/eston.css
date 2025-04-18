@@ -711,7 +711,12 @@ ul {
 .main-menu__logo {
   position: relative;
   display: block;
-  padding: 36px 0;
+  padding: 0px;
+  width: 10%;
+}
+.main-menu__logo a img {
+width: 100%;
+
 }
 
 .main-menu__main-menu-box {

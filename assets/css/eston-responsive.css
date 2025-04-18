@@ -781,7 +781,10 @@
        height: 30px;
        font-size: 10px;
     }
-    
+    .main-menu__logo {
+        padding: 18px 0px;
+        width: 30%;
+    }
     .section-title__tagline {
         margin-left: -12px;
     }
