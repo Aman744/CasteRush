@@ -3750,7 +3750,7 @@ width: 100%;
 }
 .owl-carousel .owl-item img {
   display: block;
-  width: 50% !important;
+  width: 100% !important;
 }
 .slider-logo{
   justify-content: center;
@@ -6723,7 +6723,7 @@ width: 100%;
 .testimonial-one {
   position: relative;
   display: block;
-  padding: 110px 0 120px;
+  padding: 110px 0 0px;
   z-index: 1;
 }
 
@@ -6760,8 +6760,8 @@ width: 100%;
 
 .testimonial-one__text {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 18px;
+  line-height: 20px;
   text-align: center;
   letter-spacing: -0.02em;
   color: var(--eston-black);
