@@ -1018,6 +1018,11 @@ width: 100%;
   }
 }
 
+@media (max-width: 768px) {
+ .col {
+    flex: auto;
+}
+}
 .mobile-nav__buttons a {
   font-size: 20px;
   color: var(--eston-base);
