@@ -39,7 +39,9 @@
 .gutter-y-30 {
   --bs-gutter-y: 30px;
 }
-
+.space{
+  padding: 20px;
+}
 video {
 
   top: 0;
