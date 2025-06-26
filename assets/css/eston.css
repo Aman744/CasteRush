@@ -1017,12 +1017,17 @@ width: 100%;
     display: none;
   }
 }
-
+.space{
+  padding: 20px;
+}
 @media (max-width: 768px) {
      .col {
         flex: auto;
         width: 25%;
     }
+    .space{
+  padding: 0px;
+}
 }
 .mobile-nav__buttons a {
   font-size: 20px;
