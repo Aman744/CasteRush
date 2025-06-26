@@ -1019,9 +1019,10 @@ width: 100%;
 }
 
 @media (max-width: 768px) {
- .col {
-    flex: auto;
-}
+     .col {
+        flex: auto;
+        width: 25%;
+    }
 }
 .mobile-nav__buttons a {
   font-size: 20px;
