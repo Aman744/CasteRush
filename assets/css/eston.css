@@ -2503,6 +2503,9 @@ width: 100%;
   left: 0;
   z-index: -1;
 }
+.about-one__text{
+  color: black;
+}
 
 .about-one__shape-2 img {
   width: auto;
