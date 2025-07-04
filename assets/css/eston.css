@@ -3335,7 +3335,9 @@ width: 100%;
   transform: rotate(21deg);
 }
 
-.sliding-text__list li:last-child {}
+.sliding-text__list li:last-child {
+  
+}
 
 .sliding-text__list li:last-child::before {
   display: block;
