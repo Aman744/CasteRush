@@ -768,26 +768,30 @@
 
 /* Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
-    .buy-btn{
-    margin: 25px 10px;
-}
-    
+    .buy-btn {
+        margin: 25px 10px;
+    }
+
     .main-slider {
         margin-top: 95px;
     }
+
     .slider-play {
-    bottom: 0px;
+        bottom: 0px;
     }
+
     .slider-play {
-       bottom: 20px;
-       width: 30px;
-       height: 30px;
-       font-size: 10px;
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        font-size: 10px;
     }
+
     .main-menu__logo {
         padding: 18px 0px;
         width: 30%;
     }
+
     .section-title__tagline {
         margin-left: -12px;
     }
