@@ -140,6 +140,7 @@
     .project-one__budget {
         margin-left: 0;
         margin-top: 10px;
+        width: 300px;
     }
 
     .project-one__list-right {
@@ -880,6 +881,9 @@
     .project-one__director-and-budget {
         flex-direction: column;
         margin-bottom: 20px;
+    }
+    .project-one__director {
+         width: 100%;
     }
 
     .project-one__budget {
