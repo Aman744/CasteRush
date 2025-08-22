@@ -704,7 +704,7 @@ ul {
 .main-menu__wrapper {
   position: relative;
   display: block;
-  padding: 0px 200px 0px;
+  padding: 0px 100px 0px;
   z-index: 1;
 }
 
