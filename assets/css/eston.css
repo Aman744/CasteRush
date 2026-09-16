@@ -2917,7 +2917,13 @@ ul {
   padding: 120px 0 120px;
   z-index: 1;
 }
-
+.project-one-top {
+  position: relative;
+  display: block;
+  background-color: #C72538;
+  padding: 20px 0 20px;
+  z-index: 1;
+}
 .project-one__top {
   position: relative;
   display: block;
