@@ -43,8 +43,8 @@
     <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/eston.css" />
-    <link rel="stylesheet" href="assets/css/eston-responsive.css" />
+    <link rel="stylesheet" href="assets/css/eston.css?v=20260925d" />
+    <link rel="stylesheet" href="assets/css/eston-responsive.css?v=20260925d" />
 </head>
 <script>
     const path = window.location.pathname.toLowerCase();
@@ -69,53 +69,116 @@
             <nav class="main-menu">
                 <div class="main-menu__wrapper">
                     <div class="main-menu__wrapper-inner">
+
+                        <!-- Logo -->
                         <div class="main-menu__logo">
-                            <a href="index.html"><img src="./assets/images/resources/logo-white.png" alt=""></a>
+                            <a href="index.html">
+                                <img src="./assets/images/resources/logo-white.png" alt="The Caste Rush">
+                            </a>
                         </div>
+
+                        <!-- Main Menu -->
                         <div class="main-menu__main-menu-box">
-                            <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+
+                            <a href="#" class="mobile-nav__toggler">
+                                <i class="fa fa-bars"></i>
+                            </a>
+
                             <ul class="main-menu__list">
-                                <li class="">
-                                    <a href="index.html">Home </a>
+
+                                <li>
+                                    <a href="index.html">Home</a>
                                 </li>
+
                                 <li>
                                     <a href="#about">About</a>
                                 </li>
+
                                 <li>
-                                    <a href="#screening">Screening </a>
-                                </li>
-                                <li>
-                                    <a href="#schedule">Schedule </a>
+                                    <a href="#screening">Screening</a>
                                 </li>
 
-                                <li class="">
+                                <!-- Watch Dropdown -->
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);">
+                                        Watch
+                                        <span class="fas fa-chevron-down menu-arrow"></span>
+                                    </a>
+
+                                    <ul class="shadow-box">
+
+                                        <!-- Tubi -->
+                                        <li>
+                                            <a href="https://tubitv.com/movies/100060555/the-caste-rush" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span><i class="fas fa-tv"></i></span>
+                                                Watch Free on Tubi
+                                            </a>
+                                        </li>
+
+                                        <!-- YouTube -->
+                                        <li>
+                                            <a href="https://youtu.be/OyTnnKAX1Rg" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span><i class="fab fa-youtube"></i></span>
+                                                Watch Free on YouTube
+                                            </a>
+                                        </li>
+
+                                        <!-- Pickrelay
+                                        <li>
+                                            <a href="https://pickrelay.com/app/t/n7eg-jhkx" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span><i class="fas fa-play-circle"></i></span>
+                                                Watch Free on Pickrelay
+                                            </a>
+                                        </li> -->
+
+                                        <!-- Filmzie -->
+                                        <li>
+                                            <a href="https://filmzie.com/content/the-caste-rush-2025" target="_blank"
+                                                rel="noopener noreferrer">
+                                                <span><i class="fas fa-film"></i></span>
+                                                Watch Free on Filmzie
+                                            </a>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <!-- <li>
+                                    <a href="#schedule">Schedule</a>
+                                </li> -->
+
+                                <li>
                                     <a href="#crew">Crew</a>
-
                                 </li>
-                                <li class="">
+
+                                <li>
                                     <a href="#gallery">Gallery</a>
                                 </li>
-                                <li class="">
-                                    <a href="./media/index.html">Media</a>
+
+                                <li>
+                                    <a href="media/index.html">Media</a>
                                 </li>
+
                                 <li>
                                     <a href="contact.html">Contact</a>
                                 </li>
+
                             </ul>
                         </div>
-                        <div class="main-menu__right">
-                            <!-- <div class="main-menu__nav-sidebar-icon">
-                                <a href="https://www.youtube.com/watch?v=eJ9tMkc2EaQ"
-                                    class="main-menu__btn thm-btn video-popup">
-                                    <span class="fas fa-long-arrow-alt-right"></span>
-                                    WATCH TRAILER</a>
-                            </div> -->
+
+                        <!-- Right Side -->
+                        <!-- <div class="main-menu__right">
                             <div class="main-menu__btn-box">
                                 <a href="https://tubitv.com/movies/100060555/the-caste-rush" target="_blank"
                                     rel="noopener noreferrer" class="main-menu__btn thm-btn watch-film-btn">
-                                    WATCH MOVIE</a>
+                                    WATCH MOVIE
+                                </a>
                             </div>
-                        </div>
+                        </div> -->
+
                     </div>
                 </div>
             </nav>
@@ -127,42 +190,16 @@
         </div>
         <!-- /.stricky-header -->
 
-        <!-- Main Sllider Start -->
+        <!-- Main Slider Start -->
         <section class="main-slider">
-            <div class="slider-play">
-                <div class="play-button">
-                    <a href="https://www.youtube.com/watch?v=eJ9tMkc2EaQ" class="video-popup">
-                        <span class="fas fa-solid fa-play"></span></a>
-                </div>
-            </div>
-
-            <!--Video One Start-->
-            <!-- <section class="video-one">
-    <div class="container">
-        <div class="video-one__inner">
-            <div class="video-one__img">
-                <img src="assets/images/backgrounds/slider-image.jpg" alt="">
-                <div class="video-one__video-link">
-                    <a href="https://www.youtube.com/watch?v=eJ9tMkc2EaQ" class="video-popup">
-                        <div class="video-one__text">
-                            <p>Play</p>
-                            <i class="ripple"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-            <!--Video One End-->
-            <img src="./assets/images/backgrounds/casterush-slider.jpg" alt="" style="
-    width: 100%;
-    margin-top: 100px;
-"></a>
-            <!-- <video src="./assets/images/backgrounds/Video.mp4" autoplay muted loop playsinline> -->
-            </video>
+            <a href="https://www.youtube.com/watch?v=eJ9tMkc2EaQ" class="slider-play video-popup"
+                aria-label="Watch Trailer">
+                <span class="fas fa-play"></span>
+            </a>
+            <img src="./assets/images/backgrounds/casterush-slider.jpg" alt="The Caste Rush" class="main-slider__img">
         </section>
-        <!--Main Sllider Start -->
+        <!-- Main Slider End -->
+
 
 
         <section class="project-one-top">
@@ -170,37 +207,79 @@
                 <div class="project-one__top">
                     <div class="row align-items-center">
 
-                        <!-- Title -->
-                        <div class="col-xl-8 col-lg-8 col-md-7">
+                        <!-- Left: Title -->
+                        <div class="col-xl-5 col-lg-5 col-md-12">
                             <div class="project-one__left">
                                 <div class="section-title text-left">
                                     <div class="section-title__title-box">
                                         <h2 class="section-title__title">
-                                            Watch <span>The Caste Rush</span>
-                                            <small>(2025)</small>
+                                            Watch The Caste Rush
+                                            <span class="section-title__year">(2025)</span>
                                         </h2>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Watch Now Button -->
-                        <div class="col-xl-4 col-lg-4 col-md-5">
+                        <!-- Right: Watch Buttons -->
+                        <div class="col-xl-7 col-lg-7 col-md-12">
                             <div class="project-one__right">
-                                <div class="project-one__btn-box">
+                                <div class="project-one__btn-box watch-film-buttons">
 
+                                    <!-- Tubi -->
                                     <a href="https://tubitv.com/movies/100060555/the-caste-rush" target="_blank"
-                                        rel="noopener noreferrer" class="main-menu__btn thm-btn watch-film-btn">
-
-                                        <span class="fas fa-play"></span>
-
-                                        <span class="watch-film-btn__text">
-                                            Watch Now
+                                        rel="noopener noreferrer" class="watch-film-btn watch-film-btn--tubi">
+                                        <span class="watch-film-btn__icon">
+                                            <i class="fas fa-play"></i>
                                         </span>
+                                        <span class="watch-film-btn__text">
+                                            Watch Free on <strong>Tubi</strong>
+                                        </span>
+                                        <span class="watch-film-btn__arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                    </a>
 
-                                        <span class="fas fa-long-arrow-alt-right"></span>
+                                    <!-- Pickrelay
+                                    <a href="https://pickrelay.com/app/t/n7eg-jhkx" target="_blank"
+                                        rel="noopener noreferrer" class="watch-film-btn watch-film-btn--pickrelay">
+                                        <span class="watch-film-btn__icon">
+                                            <i class="fas fa-film"></i>
+                                        </span>
+                                        <span class="watch-film-btn__text">
+                                            Watch Free on <strong>Pickrelay</strong>
+                                        </span>
+                                        <span class="watch-film-btn__arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                    </a> -->
 
+                                    <!-- Filmzie -->
+                                    <a href="https://filmzie.com/content/the-caste-rush-2025" target="_blank"
+                                        rel="noopener noreferrer" class="watch-film-btn watch-film-btn--filmzie">
+                                        <span class="watch-film-btn__icon">
+                                            <i class="fas fa-video"></i>
+                                        </span>
+                                        <span class="watch-film-btn__text">
+                                            Watch Free on <strong>Filmzie</strong>
+                                        </span>
+                                        <span class="watch-film-btn__arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
+                                    </a>
+
+                                    <!-- YouTube -->
+                                    <a href="https://youtu.be/OyTnnKAX1Rg" target="_blank" rel="noopener noreferrer"
+                                        class="watch-film-btn watch-film-btn--youtube">
+                                        <span class="watch-film-btn__icon">
+                                            <i class="fab fa-youtube"></i>
+                                        </span>
+                                        <span class="watch-film-btn__text">
+                                            Watch Free on <strong>YouTube</strong>
+                                        </span>
+                                        <span class="watch-film-btn__arrow">
+                                            <i class="fas fa-arrow-right"></i>
+                                        </span>
                                     </a>
 
                                 </div>
@@ -511,9 +590,10 @@
                         <div class="col-xl-7 col-xl-7">
                             <div class="project-one__left">
                                 <div class="section-title text-left">
-                                    <p class="section-title__tagline">Promotions</p>
+                                    <p class="section-title__tagline" style="color: white;">Promotions</p>
                                     <div class="section-title__title-box">
-                                        <h2 class="section-title__title">Past Screening Events</h2>
+                                        <h2 class="section-title__title" style="color: white;">Past Screening Events
+                                        </h2>
                                         <p></p>
                                     </div>
                                 </div>
@@ -2051,11 +2131,11 @@
                     <span class="fas fa-long-arrow-alt-right"></span>
                     WATCH TRAILER</a>
             </div> -->
-            <div class="main-menu__btn-box">
+            <!-- <div class="main-menu__btn-box">
                 <a href="https://tubitv.com/movies/100060555/the-caste-rush" target="_blank" rel="noopener noreferrer"
                     class="main-menu__btn thm-btn watch-film-btn">
                     WATCH MOVIE</a>
-            </div>
+            </div> -->
         </div>
         <!-- /.mobile-nav__content -->
     </div>
@@ -2107,7 +2187,7 @@
 
 
     <!-- template js -->
-    <script src="assets/js/eston.js"></script>
+    <script src="assets/js/eston.js?v=20260925d"></script>
     <!-- Lightbox JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 

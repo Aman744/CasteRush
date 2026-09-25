@@ -774,23 +774,36 @@
     }
 
     .main-slider {
-        margin-top: 95px;
+        margin-top: 60px;
+        background-color: #141414;
     }
 
     .slider-play {
-        bottom: 0px;
+        top: 50%;
+        left: 50%;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        width: 44px;
+        height: 44px;
+        border-width: 2.5px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.4), 0 0 0 4px rgba(229, 9, 20, 0.25);
     }
 
-    .slider-play {
-        bottom: 20px;
-        width: 30px;
-        height: 30px;
-        font-size: 10px;
+    .slider-play span,
+    .slider-play i {
+        font-size: 14px;
+        margin-left: 2px;
     }
 
     .main-menu__logo {
-        padding: 18px 0px;
-        width: 30%;
+        padding: 4px 0px;
+        width: auto;
+        max-width: 130px;
+    }
+    .main-menu__logo a img {
+        max-height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     .section-title__tagline {
@@ -1711,17 +1724,28 @@
 --------------------------------------------------------------*/
 @media only screen and (min-width: 1200px) and (max-width: 1400px) {
     .main-menu__wrapper {
-        padding: 0px 100px 0px;
+        padding: 0px 30px 0px;
     }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .main-menu__wrapper {
-        padding: 0px 100px 0px;
+        padding: 14px 28px;
     }
 
+    .main-slider {
+        margin-top: 72px;
+    }
 
+    .slider-play {
+        width: 58px;
+        height: 58px;
+    }
 
+    .slider-play span,
+    .slider-play i {
+        font-size: 19px;
+    }
 
     .main-menu-two .mobile-nav__toggler {
         color: var(--eston-base);
@@ -1732,16 +1756,24 @@
     }
 }
 
-
-
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-menu__wrapper {
-        padding: 0px 100px 0px;
+        padding: 12px 24px;
     }
 
+    .main-slider {
+        margin-top: 66px;
+    }
 
+    .slider-play {
+        width: 52px;
+        height: 52px;
+    }
 
-
+    .slider-play span,
+    .slider-play i {
+        font-size: 17px;
+    }
 
     .main-menu-two .mobile-nav__toggler {
         color: var(--eston-base);
@@ -1750,22 +1782,15 @@
     .main-menu-two .mobile-nav__toggler:hover {
         color: var(--eston-black);
     }
-
-
 
     .main-header-three__top {
         display: none;
     }
-
 }
-
-
-
-
 
 @media (max-width: 767px) {
     .main-menu__wrapper {
-        padding: 0px 20px 0px;
+        padding: 10px 18px;
     }
 
     .main-menu__right {

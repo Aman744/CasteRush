@@ -381,10 +381,69 @@
       mainClass: "mfp-fade",
       removalDelay: 160,
       preloader: true,
-
-      fixedContentPos: false
+      fixedContentPos: true,
+      closeBtnInside: false,
+      iframe: {
+        markup: '<div class="mfp-iframe-scaler">' +
+          '<div class="mfp-close"></div>' +
+          '<iframe class="mfp-iframe" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>' +
+          '</div>',
+        patterns: {
+          youtube: {
+            index: 'youtube.com/',
+            id: 'v=',
+            src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+          },
+          youtu_be: {
+            index: 'youtu.be/',
+            id: '/',
+            src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+          }
+        },
+        srcAction: 'iframe_src'
+      }
     });
   }
+
+  // Delegated click handler to guarantee video popup opens reliably
+  $(document).on("click", ".video-popup", function (e) {
+    e.preventDefault();
+    var videoUrl = $(this).attr("href");
+    if (!videoUrl) return;
+
+    if (!$.magnificPopup.instance || !$.magnificPopup.instance.isOpen) {
+      $.magnificPopup.open({
+        items: {
+          src: videoUrl
+        },
+        type: "iframe",
+        mainClass: "mfp-fade",
+        removalDelay: 160,
+        preloader: true,
+        fixedContentPos: true,
+        closeBtnInside: false,
+        iframe: {
+          markup: '<div class="mfp-iframe-scaler">' +
+            '<div class="mfp-close"></div>' +
+            '<iframe class="mfp-iframe" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>' +
+            '</div>',
+          patterns: {
+            youtube: {
+              index: 'youtube.com/',
+              id: 'v=',
+              src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+            },
+            youtu_be: {
+              index: 'youtu.be/',
+              id: '/',
+              src: 'https://www.youtube.com/embed/%id%?autoplay=1&rel=0'
+            }
+          },
+          srcAction: 'iframe_src'
+        }
+      });
+    }
+  });
 
 
 
@@ -469,18 +528,34 @@
     dropdownAnchor.each(function () {
       let self = $(this);
       let toggleBtn = document.createElement("BUTTON");
+      toggleBtn.setAttribute("type", "button");
       toggleBtn.setAttribute("aria-label", "dropdown toggler");
       toggleBtn.innerHTML = "<i class='fa fa-angle-down'></i>";
       self.append(function () {
         return toggleBtn;
       });
-      self.find("button").on("click", function (e) {
+
+      // Toggle dropdown when clicking anchor or button
+      self.on("click", function (e) {
         e.preventDefault();
-        let self = $(this);
-        self.toggleClass("expanded");
-        self.parent().toggleClass("expanded");
-        self.parent().parent().children("ul").slideToggle();
+        e.stopPropagation();
+        let btn = $(this).find("button");
+        btn.toggleClass("expanded");
+        $(this).toggleClass("expanded");
+        $(this).siblings("ul").slideToggle(280);
       });
+    });
+
+    // Close mobile nav when clicking any nav link (except dropdown toggler)
+    $(".mobile-nav__container .main-menu__list a:not(.dropdown > a)").on("click", function () {
+      $(".mobile-nav__wrapper").removeClass("expanded");
+      $("body").removeClass("locked");
+    });
+
+    // Also close mobile nav when clicking any dropdown item
+    $(".mobile-nav__container .main-menu__list .dropdown ul a").on("click", function () {
+      $(".mobile-nav__wrapper").removeClass("expanded");
+      $("body").removeClass("locked");
     });
   }
 
@@ -859,57 +934,50 @@
   }
 
   function SmoothMenuScroll() {
-    var anchor = $(".scrollToLink");
-    if (anchor.length) {
-      anchor.children("a").bind("click", function (event) {
-        if ($(window).scrollTop() > 10) {
-          var headerH = "90";
-        } else {
-          var headerH = "90";
+    $(document).on("click", '.main-menu__list a[href^="#"], .mobile-nav__container a[href^="#"], .scrollToLink a', function (event) {
+      var targetHref = $(this).attr("href");
+      if (targetHref && targetHref.length > 1 && targetHref !== "#") {
+        var $target = $(targetHref);
+        if ($target.length) {
+          event.preventDefault();
+          var headerH = $(".main-header").outerHeight() || 80;
+          $("html, body")
+            .stop()
+            .animate({
+              scrollTop: Math.max(0, $target.offset().top - headerH)
+            }, 700, "swing", function () {
+              if (history.pushState) {
+                history.pushState(null, null, targetHref);
+              }
+            });
         }
-        var target = $(this);
-        $("html, body")
-          .stop()
-          .animate({
-              scrollTop: $(target.attr("href")).offset().top - headerH + "px"
-            },
-            1200,
-            "easeInOutExpo"
-          );
-        anchor.removeClass("current");
-        anchor.removeClass("current-menu-ancestor");
-        anchor.removeClass("current_page_item");
-        anchor.removeClass("current-menu-parent");
-        target.parent().addClass("current");
-        event.preventDefault();
-      });
-    }
+      }
+    });
   }
   SmoothMenuScroll();
 
   function OnePageMenuScroll() {
     var windscroll = $(window).scrollTop();
-    if (windscroll >= 117) {
-      var menuAnchor = $(".one-page-scroll-menu .scrollToLink").children("a");
-      menuAnchor.each(function () {
-        var sections = $(this).attr("href");
-        $(sections).each(function () {
-          if ($(this).offset().top <= windscroll + 100) {
-            var Sectionid = $(sections).attr("id");
-            $(".one-page-scroll-menu").find("li").removeClass("current");
-            $(".one-page-scroll-menu").find("li").removeClass("current-menu-ancestor");
-            $(".one-page-scroll-menu").find("li").removeClass("current_page_item");
-            $(".one-page-scroll-menu").find("li").removeClass("current-menu-parent");
-            $(".one-page-scroll-menu")
-              .find("a[href*=\\#" + Sectionid + "]")
-              .parent()
-              .addClass("current");
-          }
-        });
-      });
-    } else {
-      $(".one-page-scroll-menu li.current").removeClass("current");
-      $(".one-page-scroll-menu li:first").addClass("current");
+    var headerH = $(".main-header").outerHeight() || 80;
+    var sections = ["about", "screening", "schedule", "crew", "gallery"];
+    var currentSection = null;
+
+    for (var i = 0; i < sections.length; i++) {
+      var el = document.getElementById(sections[i]);
+      if (el) {
+        var top = $(el).offset().top - headerH - 50;
+        if (windscroll >= top) {
+          currentSection = sections[i];
+        }
+      }
+    }
+
+    if (currentSection) {
+      $(".main-menu__list li").removeClass("current");
+      $(".main-menu__list a[href='#" + currentSection + "'], .main-menu__list a[href='index.html#" + currentSection + "']").parent().addClass("current");
+    } else if (windscroll < 180) {
+      $(".main-menu__list li").removeClass("current");
+      $(".main-menu__list a[href='index.html'], .main-menu__list a[href='#']").parent().eq(0).addClass("current");
     }
   }
 
@@ -1075,15 +1143,12 @@
 
   // window scroll event
   $(window).on("scroll", function () {
-    // if ($(".stricked-menu").length) {
-    //   var headerScrollPos = 130;
-    //   var stricky = $(".stricked-menu");
-    //   if ($(window).scrollTop() > headerScrollPos) {
-    //     stricky.addClass("stricky-fixed");
-    //   } else if ($(this).scrollTop() <= headerScrollPos) {
-    //     stricky.removeClass("stricky-fixed");
-    //   }
-    // }
+    if ($(window).scrollTop() > 40) {
+      $(".main-header").addClass("scrolled");
+    } else {
+      $(".main-header").removeClass("scrolled");
+    }
+
     if ($(".scroll-to-top").length) {
       var strickyScrollPos = 100;
       if ($(window).scrollTop() > strickyScrollPos) {
@@ -1094,8 +1159,6 @@
     }
 
     OnePageMenuScroll();
-
-
   });
 
   if ($(".before-after-twentytwenty").length) {
